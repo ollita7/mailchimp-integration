@@ -1,22 +1,23 @@
 
 @font-face {
     font-family: eurostile;
-    src: url(/assets/fonts/eurostile.TTF);
+    src: url(../assets/fonts/eurostile.TTF);
 }
 
+@mobile: 480px;
 @red: #FF3B7B;
 @green: #02E7C0;
 
 
 body{
-    background: url('/assets/img/wallpaper-line.png');
+    background: url('../assets/img/wallpaper-line.png');
     background-size: cover;
     background-position: center;
     font-family: eurostile;
 }
 
 .logo{
-    background: url(/assets/img/logo.png) no-repeat;
+    background: url(../assets/img/logo.png) no-repeat;
     background-size: contain;
     height: 121px;
     width: 100px;
@@ -65,7 +66,7 @@ body{
 }
 
 .form-submit{
-    width:526px;  
+    width:512px;  
     height: 60px;
     margin: auto;  
     .email-input{
@@ -87,7 +88,7 @@ body{
     .sumbit-button{
         background: @green;
         border-top-right-radius: 28px;
-        padding: 2px;
+        padding: 10px;
         border-bottom-right-radius: 28px;
         font-size: 30px !important;
         display: inline-block;
@@ -95,6 +96,11 @@ body{
         width: 112px;
         float:left;
     }    
+
+    .email-input,.sumbit-button{
+        height: 100%;
+    }
+
     .sumbit-button:hover{
         cursor: pointer;
     }
@@ -107,8 +113,70 @@ body{
 }
 
 .phone{
-    background: url('/assets/img/phone.png') no-repeat;
+    background: url('../assets/img/phone.png') no-repeat;
     background-size:contain;
     background-position:center;  
     height: 50vh;
+}
+
+#shareModal{
+
+    .modal-dialog{
+        margin-top:40vh;
+        background: black;
+        border: @green 2px solid;
+        border-radius: 0px;
+
+        .modal-content{
+            border-radius: 0px;
+            background: black;
+            color:white;
+
+            .modal-header{
+                border:none;
+            }
+
+            h2{
+                color: @red;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: @mobile) {
+    /* For mobile phones: */
+
+    .title{
+        h1,h2{
+            font-size: 12.5vw;
+        }
+    }
+
+    .email-submit {
+        p{
+            font-size: 8.5vw;
+        }
+
+        p:first-child{
+            font-size:7.5vw;
+        }
+        p.red{
+            font-size:9.5vw;
+        }
+    }
+
+    .form-submit{
+        width: 100%; 
+        height:30px;
+        .email-input{
+            width: 60%;
+            font-size: 4vw !important;
+        }
+
+        .sumbit-button{
+            width: 39%;            
+            font-size: 5vw !important;
+        }    
+    }
+
 }

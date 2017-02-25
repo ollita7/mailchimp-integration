@@ -1,12 +1,15 @@
-$(".sumbit-button").on("click",function(){
-    var email = $(".email-input").val();
-    if (!email){
-        $(".error").css("display","block");
-    }else{
-        $(".error").css("display","none");
-        add(email);
-    }    
-});
+(function () {
+    $(".sumbit-button").on("click",function(){
+        var email = $(".email-input").val();
+        if (!email){
+            $(".error").css("display","block");
+        }else{
+            $(".error").css("display","none");
+            add(email);
+            $("#shareModal").modal();
+        }    
+    });
+})()
 
 var apiKey = "5e6d7f8534685432bfbad401ee8ba178-us15";
 var listId = "86286858af";
