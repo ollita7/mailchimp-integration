@@ -45,7 +45,7 @@ var lFollowX = 0,
 function moveBackground() {
   x += (lFollowX - x) * friction;
   y += (lFollowY - y) * friction;
-  
+
   translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
 
   $('.bg').css({
