@@ -5,7 +5,7 @@ function add(email){
 
     var url = "https://cavepot.us15.list-manage.com/subscribe/post-json";
     var data = {
-        "b_email": email,
+        "EMAIL": email,
         "u": apiKey,
         "id": listId
     }

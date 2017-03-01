@@ -7,21 +7,24 @@
             $(".error").css("display","none");
             add(email);
             $("#shareModal").modal();
-        }    
+        }
     });
 })()
 
-var apiKey = "5e6d7f8534685432bfbad401ee8ba178-us15";
+var apiKey = "60da41639943e316dbb98f4aa";
 var listId = "86286858af";
 
 function add(email){
-    var url = "https://us15.api.mailchimp.com/3.0/lists/" + listId + "/members/"
+    var url = "https://cavepot.us15.list-manage.com/subscribe/post-json";
     var data = {
-        "email_address": email,
-        "status": "subscribed",
+        "EMAIL": email,
+        "u": apiKey,
+        "id": listId
     }
     $.ajax({
         type: "POST",
+        dataType: "jsonp",
+        jsonp: "c", // trigger MailChimp to return a JSONP response
         beforeSend: function (xhr) {
             xhr.setRequestHeader ("Authorization", "Basic " + btoa(":" + apiKey));
         },
