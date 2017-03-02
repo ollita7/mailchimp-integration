@@ -1,3 +1,11 @@
+//CONFIGRATION
+var apiKey = "60da41639943e316dbb98f4aa";
+var listId = "86286858af";
+var url = "http://cavepot.com/neon";
+var hashtags = "POCKET,SCALE";
+var text = "Take a look at ";
+var via = "pocket";
+
 (function () {
     $(".sumbit-button").on("click",function(){
         var email = $(".email-input").val();
@@ -5,16 +13,34 @@
             $(".error").css("display","block");
         }else{
             $(".error").css("display","none");
-            add(email);
-            $("#shareModal").modal();
+            add(email, function(){
+                $(".email-input").val("");
+                $("#shareModal").modal(function(){
+                    $("#twitter").attr("src", $("#twitter").attr("src"));
+                });
+            });
         }
     });
+    initSocial();
 })()
 
-var apiKey = "60da41639943e316dbb98f4aa";
-var listId = "86286858af";
+function initSocial(){
+    var fb = $("#facebook");
+    var twitter = $("#twitter");
 
-function add(email){
+    //FB changes
+    var fb_href = $("#facebook").attr("src").replace(/#URL/g, url);
+    $("#facebook").attr("src", fb_href);
+
+    //twitter chages
+    var twitter_src = $("#twitter").attr("href").replace(/#URL/g, url);
+    twitter_src = twitter_src.replace(/#HASHTAGS/g, hashtags);
+    twitter_src = twitter_src.replace(/#TEXT/g, text);
+    twitter_src = twitter_src.replace(/#VIA/g, via);
+    $("#twitter").attr("href", twitter_src);
+}
+
+function add(email, callback){
     var url = "https://cavepot.us15.list-manage.com/subscribe/post-json";
     var data = {
         "EMAIL": email,
@@ -31,9 +57,12 @@ function add(email){
         url: url,
         data: data,
         success: function(msg) {
-            console.log(msg);
+            if(msg.result === "success"){
+
+            }
+            if (callback != undefined) callback();
         }
-        });
+    });
 }
 
 var lFollowX = 0,
