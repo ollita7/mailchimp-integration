@@ -1,10 +1,10 @@
 //CONFIGRATION
 var apiKey = "60da41639943e316dbb98f4aa";
 var listId = "86286858af";
-var url = "http://cavepot.com/neon";
-var hashtags = "POCKET,SCALE";
-var text = "Take a look at ";
-var via = "pocket";
+var url = "http://www.iscalegreenapp.com";
+var hashtags = "iscalegreenapp";
+var text = "Crazy new app that let's you weigh your weed?!";
+var via = "iscalegreenapp";
 
 (function () {
     $(".sumbit-button").on("click",function(){
