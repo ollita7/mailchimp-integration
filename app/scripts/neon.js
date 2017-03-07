@@ -2,7 +2,7 @@
 var apiKey = "60da41639943e316dbb98f4aa";
 var listId = "86286858af";
 var url = "http://www.iscalegreenapp.com";
-var hashtags = "iscalegreenapp";
+var hashtags = "iscalegreenapp, neonroots";
 var text = "Crazy new app that let's you weigh your weed?!";
 var via = "iscalegreenapp";
 
