@@ -1,11 +1,11 @@
 //CONFIGRATION
-var apiKey = "60da41639943e316dbb98f4aa";
-var listId = "86286858af";
+var apiKey = "5a594243b7b3b14e8699c1112"; //"60da41639943e316dbb98f4aa"
+var listId = "483cfc94f9"//"86286858af"; //
 var url = "http://www.iscalegreenapp.com";
 var hashtags = "iscalegreenapp, neonroots";
 var text = "Crazy new app that let's you weigh your weed?!";
 var via = "iscalegreenapp";
-
+var urlMailchimp = "https://iscalegreenpoket.us15.list-manage.com/subscribe/post-json";
 (function () {
     $(".sumbit-button").on("click",function(){
         var email = $(".email-input").val();
@@ -41,7 +41,6 @@ function initSocial(){
 }
 
 function add(email, callback){
-    var url = "https://cavepot.us15.list-manage.com/subscribe/post-json";
     var data = {
         "EMAIL": email,
         "u": apiKey,
@@ -54,7 +53,7 @@ function add(email, callback){
         beforeSend: function (xhr) {
             xhr.setRequestHeader ("Authorization", "Basic " + btoa(":" + apiKey));
         },
-        url: url,
+        url: urlMailchimp,
         data: data,
         success: function(msg) {
             if(msg.result === "success"){
