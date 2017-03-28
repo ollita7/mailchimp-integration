@@ -1,6 +1,6 @@
 //CONFIGRATION
-var apiKey = "5a594243b7b3b14e8699c1112"; //"60da41639943e316dbb98f4aa"
-var listId = "483cfc94f9"//"86286858af"; //
+var apiKey = "dabfeedff1bba431fef17fcc1"; //"60da41639943e316dbb98f4aa"
+var listId = "44b406e72f"//"86286858af"; //
 var url = "http://www.iscalegreenapp.com";
 var hashtags = "iscalegreenapp, neonroots";
 var text = "Crazy new app that let's you weigh your weed?!";
