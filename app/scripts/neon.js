@@ -5,7 +5,7 @@ var url = "http://www.iscalegreenapp.com";
 var hashtags = "iscalegreenapp, neonroots";
 var text = "Crazy new app that let's you weigh your weed?!";
 var via = "iscalegreenapp";
-var urlMailchimp = "https://iscalegreenpoket.us15.list-manage.com/subscribe/post-json";
+var urlMailchimp = "https://neonroots.us4.list-manage.com/subscribe/post-json";
 (function () {
     $(".sumbit-button").on("click",function(){
         var email = $(".email-input").val();
